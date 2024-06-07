@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registrationPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftScreen">
+            <div class="registerLogin">
+                <div class="Welcome">
+                    <h1>Complete your registration here</h1>  
+                    <img src="register.png" alt="Login Image">
+              </div>            
+            </div>
+        </div>
+        <div class="rightScreen">
+            <form class="form" action="#" method="POST">
+                <div class="formAdd">
+                    <h2>Enter your details below to Sign up</h2> 
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name here" required>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="enter your username here" required>
+                
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="please enter your password" required>
+
+                    <label for="confirm-password">Confirm your password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm your password" required>  
+                
+                    <label for="email">Email Id:</label>
+                    <input type="email" id="email" name="email" placeholder="enter your email ID here" required>
+                
+                    <label for="phone">Contact details:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="enter your contact details here" required>
+               
+                    <label for="dob">DOB:</label>
+                    <input type="date" id="dob" name="dob" required>
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">Select</option>
+                        <option value="us">Russia</option>
+                        <option value="ca">India</option>
+                        <option value="uk">France</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label>Gender</label>
+                    <div class="genders">
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="other">Other</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                    </div>
+
+                    <label for="profile-picture">Profile Picture</label>
+                    <input type="file" id="profile-picture" name="profile-picture">
+
+                </div>
+                <div class="agree">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="inline">terms and conditions</label>
+                </div>
+                <div class="formButton">     
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

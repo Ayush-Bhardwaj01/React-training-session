@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+.loginleft {
+    flex: 1;
+    background: url('bgimage.avif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+
+.loginwelcome {
+    color: rgb(181, 180, 189);
+    padding: 20px; 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+.loginwelcome h1 {
+    font-size: 2em; 
+    margin: 0; 
+    text-shadow: 1px 1px 2px rgba(221, 212, 212, 0.2); 
+}
+
+.arrow-icon {
+    width: 110px;
+    height: auto;
+    margin-left: 0px; 
+    vertical-align: middle; 
+}
+
+.loginright {
+    flex: 2;
+    padding: 20px;
+}
+
+.form {
+    padding: 10px;
+}
+
+.form h2 {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 24px;
+}
+
+.form label {
+    color: black;
+    display: block;
+    font-size: 20px;
+    margin: 10px 0 10px;
+}
+
+.form input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #535050;
+    border-radius: 8px;
+    width: 30%;
+    box-sizing: content-box;
+}
+
+.inline {          
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form input[type="checkbox"] {      
+    width: auto;
+    margin-right: 5px;
+}
+
+.rememberlogin {        
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+}
+.form button {
+    width: 20%;
+    padding: 10px;
+    background-color: #097925;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form button:hover {
+    opacity: 0.9;
+}
+
+
