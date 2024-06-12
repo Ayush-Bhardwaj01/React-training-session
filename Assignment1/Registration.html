@@ -13,22 +13,20 @@
                 <div class="Welcome">
                     <h1>Complete your registration here</h1>  
                     <img src="register.png" alt="Login Image">
-              </div>            
+                </div>            
             </div>
         </div>
         <div class="rightScreen">
-            <form class="form" action="#" method="POST">
+            <form class="form" name="registrationForm" action="#" method="POST" onsubmit="consoleLog(); return false;">
                 <div class="formAdd">
                     <h2>Enter your details below to Sign up</h2> 
                     <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name here" required>
-
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="enter your username here" required>
                 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="please enter your password" required>
-
                     <label for="confirm-password">Confirm your password:</label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm your password" required>  
                 
@@ -49,7 +47,6 @@
                         <option value="uk">France</option>
                         <option value="other">Other</option>
                     </select>
-
                     <label>Gender</label>
                     <div class="genders">
                         <label for="male">Male</label>
@@ -59,10 +56,8 @@
                         <label for="other">Other</label>
                         <input type="radio" id="other" name="gender" value="other" required>
                     </div>
-
                     <label for="profile-picture">Profile Picture</label>
                     <input type="file" id="profile-picture" name="profile-picture">
-
                 </div>
                 <div class="agree">
                     <input type="checkbox" id="terms" name="terms" required>
@@ -70,10 +65,84 @@
                 </div>
                 <div class="formButton">     
                     <button type="submit">Submit</button>
-                    <button type="reset">Reset</button></div>
+                    <button type="reset">Reset</button>
+                    <button type="button" onclick="addUser()">Add User</button>
                 </div>
             </form>
         </div>
     </div>
+    <div id="userDataDiv"></div>
+    
+    <script>
+        function consoleLog() {
+            var formFields = document.forms["registrationForm"];
+            
+            var fullname = formFields["fullname"].value;
+            var username = formFields["username"].value;
+            var password = formFields["password"].value;
+            var country = formFields["country"].value;
+            
+            var radios = formFields.querySelectorAll('input[name="gender"]');
+            var gender;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
+                    break;
+                }
+            }
+            console.log('Full Name:', fullname);
+            console.log('Username:', username);
+            console.log('Password:', password);
+            console.log('Country:', country);
+            console.log('Gender:', gender);
+        }
+        function tableStructure() {
+            var table = document.createElement("table");
+            var thead = table.createTHead();
+            var row = thead.insertRow();
+            
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = "<b>Full Name</b>";
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = "<b>Username</b>";
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = "<b>Password</b>";
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = "<b>Country</b>";
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = "<b>Gender</b>";
+            return table;
+        }
+        function addUser() {
+            var formFields = document.forms["registrationForm"];
+            var userDataDiv = document.getElementById("userDataDiv");
+            if (userDataDiv.getElementsByTagName("table").length === 0) {
+                var table = tableStructure();
+                userDataDiv.appendChild(table);
+            }
+            var table = userDataDiv.getElementsByTagName("table")[0];
+            var tbody = table.createTBody();
+            var row = tbody.insertRow();
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = formFields["fullname"].value;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = formFields["username"].value;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = formFields["password"].value;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = formFields["country"].value;
+            var radios = formFields.querySelectorAll('input[name="gender"]');
+            var gender;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
+                    break;
+                }
+            }
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = gender;
+            document.getElementById("userDataDiv").appendChild(table);
+        }
+    </script>
 </body>
 </html>

@@ -113,4 +113,15 @@ body {
     opacity: 0.9;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 
+    .loginleft,
+    .loginright {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+}

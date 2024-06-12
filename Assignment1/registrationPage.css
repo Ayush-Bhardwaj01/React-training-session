@@ -4,7 +4,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0px;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,75 +26,41 @@ body {
   align-items: center;
   color: white;
   padding: 20px;
-
-}
-
-.welcome {
-  color: rgb(181, 180, 189); 
-  padding: 30px; 
-  margin-bottom: 10px; 
-}
-
-.welcome h1 {
-  font-size: 2em;
-  text-shadow: 1px 1px 2px rgb(255, 251, 251); 
-}
-
-.Welcome img {
-  display: block;
-  margin: 0 auto; 
-}
-
-.form h2 {
-  font-size: 30px;
-  margin-top: 0px;
-}
-
-.formAdd input[type="text"],
-.formAdd input[type="password"],
-.formAdd input[type="email"],
-.formAdd input[type="tel"],
-.formAdd input[type="date"],
-.formAdd select#country
-{
-  margin-bottom: 20px; 
-}
-
-.genders {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10px;
-}
-
-.genders input[type="radio"] {
-  margin-right: 360px; 
-  margin-left: 0px;
-  margin-top: -5px;
-}
-
-.genders label {
-  margin-right: 10px;
-}
-
-
-.leftScreen .registerLogin h1 {
-  margin: 0;
-  font-size: 2em;
+  margin-bottom: -10px;
 }
 
 .rightScreen {
-  flex: 2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.welcome {
+  color: rgb(181, 180, 189);
+  padding: 20px;
+}
+
+.welcome h1 {
+  font-size: 1.5em;
+  text-shadow: 1px 1px 2px rgb(255, 251, 251);
+  margin: 0;
+}
+
+.form {
+  flex: 1;
+  padding: 20px;
+}
+
+.form h2 {
+  font-size: 24px;
+  margin-top: 2px; 
+
 }
 
 .formAdd {
-  flex: 1 1 45%;
+  margin-bottom: 20px;
 }
 
 .formAdd label {
@@ -104,30 +70,33 @@ form {
 
 .formAdd input,
 .formAdd select {
-  width: 100%;
+  width: calc(100% - 20px); 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.agree {
-  display: flex;
-  align-items: flex-end;
-  flex: 100%;
-  justify-content: normal;
-  gap: 10px;
+.genders {
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+  margin-bottom: 10px;
 }
 
-.agree input {
+.genders input[type="radio"] {
+  margin-right: 10px;
+  margin-left: 0; 
+}
+
+.agree {
+  margin-bottom: 10px;
+}
+
+.agree label {
   margin-right: 10px;
 }
 
-.inline {
-  display: inline-block;
-}
-
 .formButton {
-  flex: 1 1 100%;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -148,4 +117,53 @@ form {
 
 .formButton button:hover {
   opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftScreen,
+  .rightScreen {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .formAdd input,
+  .formAdd select {
+    width: calc(100% - 20px); 
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+#userDataDiv {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#userDataDiv table {
+  margin-top: 20px; 
 }

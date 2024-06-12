@@ -16,19 +16,31 @@
             </div>             
         </div>
         <div class="loginright">
-        <form class="form" action="#" method="POST">
-            <h2>Enter Login details below:</h2>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Type your username here please" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="type your password here" required>
-            <div class="rememberlogin">
-            <input type="checkbox" id="remember" name="remember">
-            <label for="remember" class="inline">Remember Me</label>
+            <form class="form" action="#" method="POST">
+                <h2>Enter Login details below:</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Type your username here please" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="type your password here" required>
+                <div class="rememberlogin">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember" class="inline">Remember Me</label>
+                </div>
+                <div class="double-button">
+                    <button type="button" onclick="log()">Login</button>
+                </div>
+            </form>
         </div>
-            <div class="double-button">
-                <button type="submit">Login</button>
-            </div>
-        </form>
+    </div>
+    <script>
+        function log() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var remember = document.getElementById('remember').checked;
+            console.log(username);
+            console.log(password);
+            console.log(remember);
+        }
+    </script>
 </body>
 </html>
