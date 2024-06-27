@@ -1,0 +1,49 @@
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.image-container {
+  position: relative;
+}
+
+.centered-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered-heading {
+  margin-top: 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  height: "100vh";
+  display: "flex";
+}
+
+.img-fluid1 {
+  max-width: 100%;
+  height: 929px;
+}
