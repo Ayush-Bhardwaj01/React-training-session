@@ -1,0 +1,99 @@
+.character-list-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filters {
+    width: 20%;
+    padding: 20px;
+    background: #f4f4cf;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .filter-section select {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px; 
+  }
+  
+  .main-content {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    background-color: aliceblue;
+  }
+  
+  .left-content {
+    width: 60%;
+  }
+  
+  .right-content {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .selected-filters {
+    margin-bottom: 20px;
+  }
+  
+  .filter-tag {
+    display: inline-block;
+    background: #ddd;
+    padding: 5px 15px; 
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .filter-tag button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #888;
+  }
+  
+  .search-section {
+    margin-bottom: 20px;
+  }
+  
+  .search-section input {
+    width: 100%;
+    padding: 8px; 
+    font-size: 14px;
+  }
+  
+  .sort-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sort-section select {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px; 
+  }
+  
+  .sort-section h4 {
+    margin-right: 5px;
+    margin-bottom: 8px;
+  }
+  
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    width: 100%;
+  }
+  
